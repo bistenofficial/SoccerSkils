@@ -22,7 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="166dp"
         android:text="Forgot password?"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBox" />
 
@@ -91,8 +93,10 @@
         android:layout_height="51dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="120dp"
+        android:layout_marginEnd="81dp"
         android:ems="10"
         android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -102,8 +106,10 @@
         android:layout_height="51dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="56dp"
+        android:layout_marginEnd="81dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -113,7 +119,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="132dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="137dp"
         android:text="Don't have an account?"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button" />
 
@@ -123,9 +131,11 @@
         android:layout_height="29dp"
         android:layout_marginStart="144dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="146dp"
         android:text="Signup now"
         android:textColor="@color/black"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
