@@ -26,6 +26,9 @@ private EditText passTwo;
             case R.id.btnBack:
                 startNewAc();
                 break;
+            case R.id.button2:
+                startNewAc();
+                break;
             default:
                 break;
         }
