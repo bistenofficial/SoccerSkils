@@ -20,7 +20,7 @@ private TextView pas;
         String txtlog = getIntent().getStringExtra("login");
         String txtpas = getIntent().getStringExtra("pass");
         log.setText(log.getText().toString()+txtlog);
-        pas.setText(txtpas);
+        pas.setText(pas.getText().toString()+txtpas);
     }
     public void goToAuth1(View v)
     {

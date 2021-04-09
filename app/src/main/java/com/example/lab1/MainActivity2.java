@@ -49,9 +49,10 @@ private EditText passTwo;
     {
         toast = Toast.makeText(this, "Введены не все данные", Toast.LENGTH_LONG);
     }
-    else
+    else {
         toast = Toast.makeText(this, "Регистрация прошла успешно", Toast.LENGTH_LONG);
-    toast.show();
         startNewAc();
+    }
+        toast.show();
     }
 }
