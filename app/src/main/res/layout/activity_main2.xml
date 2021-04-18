@@ -125,7 +125,7 @@
         android:layout_height="53dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="100dp"
-        android:text="Create"
+        android:text="@string/Reg"
         android:onClick="SignUpCheck"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
@@ -134,7 +134,7 @@
         android:id="@+id/btnBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:text="@string/back"
         android:onClick="goToAuth"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
