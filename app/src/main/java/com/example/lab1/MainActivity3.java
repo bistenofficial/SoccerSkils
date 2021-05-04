@@ -19,8 +19,8 @@ private TextView pas;
         pas= (TextView) findViewById(R.id.textView5);
         String txtlog = getIntent().getStringExtra("login");
         String txtpas = getIntent().getStringExtra("pass");
-        log.setText(log.getText().toString()+txtlog);
-        pas.setText(txtpas);
+        log.setText(log.getText().toString()+" "+txtlog);
+        pas.setText(pas.getText().toString()+" "+txtpas);
     }
     public void goToAuth1(View v)
     {
