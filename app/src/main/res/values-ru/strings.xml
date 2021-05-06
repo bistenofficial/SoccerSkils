@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back">Назад</string>
+    <string name="Reg">Регистрация</string>
+    <string name="Log">Логин:</string>
+    <string name="forgot">Забыли пароль?:</string>
+    <string name="rmb">Запомнить</string>
+    <string name="sign">Войти</string>
+    <string name="Pass">Пароль:</string>
+    <string name="acc">У вас нет аккаунта?</string>
+</resources>

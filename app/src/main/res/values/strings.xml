@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Lab1</string>
+    <string name="back">Back</string>
+    <string name="Reg">Create</string>
+    <string name="Log">Login:</string>
+    <string name="Pass">Pass:</string>
+    <string name="forgot">Forgot password?</string>
+    <string name="rmb">Remember me</string>
+    <string name="sign">Sign in</string>
+    <string name="acc">Don\'t have an account?</string>
 </resources>
