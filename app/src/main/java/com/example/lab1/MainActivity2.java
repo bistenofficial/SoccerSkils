@@ -63,7 +63,6 @@ public class MainActivity2 extends AppCompatActivity {
         c.close();
         if (i == 0) return true;
         else return false;
-
     }
 
     public void SignUpCheck(View v) {

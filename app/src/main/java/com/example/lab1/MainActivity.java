@@ -1,5 +1,6 @@
 package com.example.lab1;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -38,31 +39,28 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goDoneAuth(View v) {
-        int i = 0;
         Toast toast;
         switch (v.getId()) {
             case R.id.button:
-                SQLiteDatabase db = dbHelper.getWritableDatabase();
-                Cursor c = db.query("mytable", null, null, null, null, null, null);
-                if (c.moveToFirst()) {
-                    int loginColIndex = c.getColumnIndex("login");
-                    int passColIndex = c.getColumnIndex("pass");
-                    do {
-                        if (c.getString(loginColIndex).equals(login.getText().toString()) && c.getString(passColIndex).equals(pass.getText().toString())) {
-                            i++;
-                        }
-                    } while (c.moveToNext());
-                }
-                if (i == 1) {
+                SQLiteDatabase db = dbHelper.getReadableDatabase();
+                ContentValues cv = new ContentValues();
+                SQLiteDatabase dbWrite = dbHelper.getWritableDatabase();
+                Cursor c = db.rawQuery("select * from mytable where login = ? and pass = ?", new String[]{login.getText().toString(), pass.getText().toString()});
+                if (c.getCount() > 0) {
+                    c.moveToFirst();
+                    int enterCountColIndex = c.getColumnIndex("col");
+                    cv.put("col", c.getInt(enterCountColIndex) + 1);
+                    String name = login.getText().toString();
+                    dbWrite.update("mytable", cv, "login = ?", new String[]{name});
                     Intent intent = new Intent(this, MainActivity3.class);
                     intent.putExtra("login", login.getText().toString());
                     intent.putExtra("pass", pass.getText().toString());
                     startActivity(intent);
-                    toast = Toast.makeText(this, "Вы вошли в аккаунт "+login.getText().toString(), Toast.LENGTH_LONG);
+                    toast = Toast.makeText(this, "Вы вошли в аккаунт " + login.getText().toString(), Toast.LENGTH_LONG);
                 } else {
                     toast = Toast.makeText(this, "Логин или пароль не правильный", Toast.LENGTH_LONG);
-                    c.close();
                 }
+                c.close();
                 toast.show();
                 break;
             default:
