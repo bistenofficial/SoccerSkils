@@ -11,14 +11,18 @@ import android.widget.TextView;
 public class MainActivity3 extends AppCompatActivity {
 private TextView log;
 private TextView pas;
+private TextView count;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
         log = (TextView) findViewById(R.id.textView3);
         pas= (TextView) findViewById(R.id.textView5);
+        count = (TextView)findViewById(R.id.textView6);
         String txtlog = getIntent().getStringExtra("login");
         String txtpas = getIntent().getStringExtra("pass");
+        String enterCount = getIntent().getStringExtra("EC");
+        count.setText("Кол-во входов в данный аккаунт "+enterCount);
         log.setText(log.getText().toString()+" "+txtlog);
         pas.setText(pas.getText().toString()+" "+txtpas);
     }

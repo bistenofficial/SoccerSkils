@@ -49,12 +49,14 @@ public class MainActivity extends AppCompatActivity {
                 if (c.getCount() > 0) {
                     c.moveToFirst();
                     int enterCountColIndex = c.getColumnIndex("col");
-                    cv.put("col", c.getInt(enterCountColIndex) + 1);
+                    int enterCount = c.getInt(enterCountColIndex)+1;
+                    cv.put("col", enterCount);
                     String name = login.getText().toString();
                     dbWrite.update("mytable", cv, "login = ?", new String[]{name});
                     Intent intent = new Intent(this, MainActivity3.class);
                     intent.putExtra("login", login.getText().toString());
                     intent.putExtra("pass", pass.getText().toString());
+                    intent.putExtra("EC", String.valueOf(enterCount));
                     startActivity(intent);
                     toast = Toast.makeText(this, "Вы вошли в аккаунт " + login.getText().toString(), Toast.LENGTH_LONG);
                 } else {
